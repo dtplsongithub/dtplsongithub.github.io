@@ -14,7 +14,25 @@ if (isMobile) {
 //set things up for update
 let wc = c.width / 2;
 let hc = c.height / 2;
-let t = 0
+let t = 0;
+let splash = [
+  "this is a splash",
+  "real!!",
+  "i forgor",
+  "there are currently a total of ${splash.length+1} splashes",
+  "click here to win absolutely nothing",
+  "http response status code 102 is a processing reference",
+  "also try hexahedron1's website!",
+  "also try slinx92's website!",
+  "fun fact: this was inspired by gdplayer's website",
+  "I REMBER",
+  "hey do you guys have any good splashes",
+  "splish splash splosh",
+  "привет",
+  "no"
+];
+splash.push(`there are currently a total of ${splash.length+1} splashes`);
+let randomsplash = splash[randomint(0, splash.length-1)];
 //update
 function update() {
 
@@ -56,6 +74,7 @@ function update() {
   //cube
   ctx.strokeStyle = "#000047";
   ctx.lineWidth = 10;
+  ctx.lineCap = "round";
   line(singrade(t * 125) * 100 + 100, cosgrade(t * 125) * 25 + 500 + 80, singrade(t * 125 + 90) * 100 + 100, cosgrade(t * 125 + 90) * 25 + 500 + 80);
   line(singrade(t * 125 + 90) * 100 + 100, cosgrade(t * 125 + 90) * 25 + 650 + 80, singrade(t * 125 + 90) * 100 + 100, cosgrade(t * 125 + 90) * 25 + 500 + 80);
   line(singrade(t * 125 + 90) * 100 + 100, cosgrade(t * 125 + 90) * 25 + 500 + 80, singrade(t * 125 + 180) * 100 + 100, cosgrade(t * 125 + 180) * 25 + 500 + 80);
@@ -71,11 +90,11 @@ function update() {
   line(singrade(t * 125 - 90) * 100 + 100, cosgrade(t * 125 - 90) * 25 + 650 + 80, singrade(t * 125) * 100 + 100, cosgrade(t * 125) * 25 + 650 + 80);
 
   //text
-  writeint(wc, 40, "dtpls's site", "32px Consolas", 21, 9999, 2, 7, 0.07, t, "n", [20, 90, 100], "white");
-  writeint(wc, c.height - 20, "copyleft 2017-2023", "16px Consolas", 10, 999, 2, 7, 0.07, t, "n", [20, 90, 100], "white");
+  writeint(wc, 40, "welcome", "32px Consolas", 21, 9999, 2, 7, 0.07, t, "n", [20, 90, 100], "white");
+  writeint(wc, c.height - 20, randomsplash, "16px Consolas", 10, 999, 2, 7, 0.07, t, "n", [20, 90, 100], "white");
   writeint(wc + Math.sin(t / 3 + 76) * 15, hc - 150, "Welcome to my site!", "64px Consolas", 34, 8, 15, 5, 0.04, t, "n", [20, 90, 100], "#eef");
-  writeint(wc + Math.sin(t / 2 + 222) * 30, hc - 60, "This is my main page. You probably came here for the link below.", "32px Consolas", 18, 6, 8, 5, 0.04, t, "h", [0, 60, 75], "#eef");
-  writeint(wc + Math.sin(t / 3) * 15, hc + 25, "also h because i ran out of ideas of what to put in here", "32px Consolas", 18, 6, 8, 5, 0.04, t, "s", [240, 60, 0], "#eef");
+  writeint(wc + Math.sin(t / 2 + 222) * 30, hc - 60, "this website is basically useless, ", "32px Consolas", 18, 6, 8, 5, 0.04, t, "h", [0, 60, 75], "#eef");
+  writeint(wc + Math.sin(t / 3) * 15, hc + 25, "since all of the informations are below", "32px Consolas", 18, 6, 8, 5, 0.04, t, "s", [240, 60, 0], "#eef");
   // document.getElementById("abtme").style.color=hslToHex(240,60,Math.sin(t * 5) * 12+82)
 }
 
@@ -131,4 +150,12 @@ function line(x0, y0, x1, y1) {
   ctx.moveTo(x0, y0);
   ctx.lineTo(x1, y1);
   ctx.stroke();
+}
+function randomint(a, b) {
+  if (a > b) {
+    var c = a;
+    a = b;
+    b = c;
+  }
+  return Math.floor(Math.random() * (b - a + 1) + a);
 }
