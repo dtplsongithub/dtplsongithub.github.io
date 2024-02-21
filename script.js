@@ -1,6 +1,7 @@
 let c = document.getElementById("ctxx");
-let ctx = c.getContext("2d");
-document.getElementById("e").innerHTML = ""
+let ctx;
+if (c!=null) ctx = c.getContext("2d");
+document.getElementById("e").innerHTML = "";
 const FPS = 60
 c.width = innerWidth - 25;
 c.height = 720;
@@ -9,7 +10,7 @@ if (isMobile) {
 
   document.getElementById("e").innerHTML = "You are on phone. this site is not mobile-friendly. :/ sorry";
 } else {
-  setInterval(update, 1000 / FPS);
+  if(c!=null)setInterval(update, 1000 / FPS);
 }
 //set things up for update
 let wc = c.width / 2;
