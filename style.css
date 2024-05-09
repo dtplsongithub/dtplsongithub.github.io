@@ -1,11 +1,11 @@
-html {
+html, body {
   height: 100%;
   width: 100%;
   background: black;
   color: white;
   font-family: "MS Gothic";
   margin: 0px;
-  padding: 0px;
+  border: 0px;
 }
 canvas {
   border-bottom: 2px solid #aaa;
