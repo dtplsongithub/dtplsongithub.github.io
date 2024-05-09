@@ -3,14 +3,16 @@ html {
   width: 100%;
   background: black;
   color: white;
-  font-family: Consolas;
+  font-family: "MS Gothic";
+  margin: 0px;
+  padding: 0px;
 }
 canvas {
-  border-top: 2px solid #fff;
-  border-left: 2px solid #fff;
-  border-right: 2px solid #aaa;
   border-bottom: 2px solid #aaa;
-  margin:5px;
+  margin:0px;
+  width:100%;
+  animation: lightglow 5s infinite;
+  animation-timing-function: linear;
 }
 button{
   background: #c7c7c7;
@@ -35,4 +37,10 @@ button:active{
 } 
 a, p, h1{
   text-shadow: 2px 2px 2px #44f;
+}
+
+@keyframes lightglow {
+  0% {box-shadow: 0px 0px 15px #ffffff;}
+  50% {box-shadow: 0px 0px 20px #ffffff;}
+  100% {box-shadow: 0px 0px 15px #ffffff;}
 }
