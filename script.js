@@ -45,8 +45,8 @@ function update() {
   // background
   let gradient = ctx.createLinearGradient(wc, 0, wc, c.height);
   gradient.addColorStop(0, "#000");
-  gradient.addColorStop(0.25, "#005");
-  gradient.addColorStop(0.75, "#005");
+  gradient.addColorStop(0.15, `#${(Math.floor(Math.sin(-t*4.4)*25+25)+"").padStart(2, "0")}0066`);
+  gradient.addColorStop(0.85, `#${(Math.floor(Math.sin(t*4.4)*25+25)+"").padStart(2, "0")}0066`);
   gradient.addColorStop(1, "#000");
 
   ctx.fillStyle = gradient;
@@ -54,21 +54,21 @@ function update() {
   //bars
   let gradient2 = ctx.createLinearGradient(wc, Math.sin(t * 4) * 220 + hc - 30, wc, Math.sin(t * 4) * 220 + hc + 30);
   gradient2.addColorStop(0, "#00000000");
-  gradient2.addColorStop(0.5, "#0077ffff");
+  gradient2.addColorStop(0.5, `#${(Math.floor(Math.sin(t*4.7)*49+49)+"").padStart(2, "0")}00ff88`);
   gradient2.addColorStop(1, "#00000000");
 
   ctx.fillStyle = gradient2;
   ctx.fillRect(0, Math.sin(t * 4) * 220 + hc - 30, c.width, 60);
   let gradient3 = ctx.createLinearGradient(wc, Math.sin(t * 5) * 220 + hc - 30, wc, Math.sin(t * 5) * 220 + hc + 30);
   gradient3.addColorStop(0, "#00000000");
-  gradient3.addColorStop(0.5, "#07f");
+  gradient3.addColorStop(0.5, `#${(Math.floor(Math.sin(t*4.35)*49+49)+"").padStart(2, "0")}00ff88`);
   gradient3.addColorStop(1, "#00000000");
 
   ctx.fillStyle = gradient3;
   ctx.fillRect(0, Math.sin(t * 5) * 220 + hc - 30, c.width, 60);
   let gradient4 = ctx.createLinearGradient(wc, Math.sin(t * 3) * 220 + hc - 30, wc, Math.sin(t * 3) * 220 + hc + 30);
   gradient4.addColorStop(0, "#00000000");
-  gradient4.addColorStop(0.5, "#07f");
+  gradient4.addColorStop(0.5, `#${(Math.floor(Math.sin(t*4.29)*49+49)+"").padStart(2, "0")}00ff88`);
   gradient4.addColorStop(1, "#00000000");
 
   ctx.fillStyle = gradient4;
@@ -85,14 +85,13 @@ function update() {
   line(singrade(t * 125 - 90) * 100 + 100, cosgrade(t * 125 - 90) * 25 + 650 + 80, singrade(t * 125 - 90) * 100 + 100, cosgrade(t * 125 - 90) * 25 + 500 + 80);
   line(singrade(t * 125 - 90) * 100 + 100, cosgrade(t * 125 - 90) * 25 + 500 + 80, singrade(t * 125) * 100 + 100, cosgrade(t * 125) * 25 + 500 + 80);
   line(singrade(t * 125) * 100 + 100, cosgrade(t * 125) * 25 + 650 + 80, singrade(t * 125) * 100 + 100, cosgrade(t * 125) * 25 + 500 + 80);
-
   line(singrade(t * 125) * 100 + 100, cosgrade(t * 125) * 25 + 650 + 80, singrade(t * 125 + 90) * 100 + 100, cosgrade(t * 125 + 90) * 25 + 650 + 80);
   line(singrade(t * 125 + 90) * 100 + 100, cosgrade(t * 125 + 90) * 25 + 650 + 80, singrade(t * 125 + 180) * 100 + 100, cosgrade(t * 125 + 180) * 25 + 650 + 80);
   line(singrade(t * 125 + 180) * 100 + 100, cosgrade(t * 125 + 180) * 25 + 650 + 80, singrade(t * 125 + 270) * 100 + 100, cosgrade(t * 125 + 270) * 25 + 650 + 80);
   line(singrade(t * 125 - 90) * 100 + 100, cosgrade(t * 125 - 90) * 25 + 650 + 80, singrade(t * 125) * 100 + 100, cosgrade(t * 125) * 25 + 650 + 80);
 
   //text
-  writeint(wc, 40, "welcome", "32px MS Gothic", 21, 9999, 2, 7, 0.07, t, "n", [20, 90, 100], "white");
+  writeint(wc, 40, "d's main site", "32px MS Gothic", 21, 9999, 2, 7, 0.07, t, "n", [20, 90, 100], "white");
   writeint(wc, c.height - 20, randomsplash, "16px MS Gothic", 10, 999, 2, 7, 0.07, t, "n", [20, 90, 100], "white");
   writeint(wc + Math.sin(t / 3 + 76) * 15, hc - 150, "Welcome to my site!", "64px MS Gothic", 34, 8, 15, 5, 0.04, t, "n", [20, 90, 100], "#eef");
   writeint(wc + Math.sin(t / 2 + 222) * 30, hc - 60, "this website is basically useless, ", "32px MS Gothic", 18, 6, 8, 5, 0.04, t, "h", [0, 60, 75], "#eef");
