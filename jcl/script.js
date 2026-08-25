@@ -240,7 +240,7 @@ let list = document.getElementById("list")
 for (i in listid) {
     let level = levels[listid[i]];
     let out = `<div class='con level'><b>${parseInt(i)+1}. ${level?level.name:listid[i]}</b>`;
-    if(level) out+=`<a href="./thumbs/${level.name}.png"><img src="./thumbs/${level.name}.png" 
+    if(level) out+=`<a href="./thumbs/${level.name.toLowerCase()}.png"><img src="./thumbs/${level.name.toLowerCase()}.png" 
     class="thumb" alt="no thumbnail available..."/></a>  `;
     if (level && level.tags) for (tag in level.tags) {
         out+= `<span class="tag">${level.tags[tag]}</span>`

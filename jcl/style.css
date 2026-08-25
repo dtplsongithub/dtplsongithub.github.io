@@ -23,7 +23,7 @@ a:active {
 }
 
 a:hover {
-    color: white !important;
+    color: #888 !important;
     text-shadow: 2px 2px 2px #88f !important;
 }
 
