@@ -1,0 +1,79 @@
+html, body {
+    width: 100%;
+    background: black;
+    margin: 0px;
+    border: 0px;
+    overflow-x: hidden;
+}
+
+a:link {
+    color: #fff;
+}
+
+a:hover {
+    color: #ccf;
+}
+
+a:visited {
+    color: #99f;
+}
+
+a:active {
+    color: #888;
+}
+
+a:hover {
+    color: white !important;
+    text-shadow: 2px 2px 2px #88f !important;
+}
+
+html, input, button {
+    font-family: "MS Gothic";
+    font-size: 20px;
+    color: aliceblue;
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+h1, h2, h3, h4 {
+    text-shadow: 3px 3px 2px #44f;
+}
+
+b, details summary {
+    text-shadow: 2px 2px 2px #44f;
+}
+
+small {
+    font-size: 15px;
+}
+
+.con {
+    margin: auto;
+    width: 90%;
+    border: 3px solid white;
+    background: #ffffff55;
+    margin-top: 10px;
+    margin-bottom: 80px;
+    padding: 10px;
+    animation: lightglow 5s infinite;
+    animation-timing-function: linear;
+}
+
+img.thumb {
+    height:200px;
+    width: auto;
+    margin:0;
+    float:right;
+}
+
+.level {
+    height:200px;
+}
+
+.tag {
+    border:1px solid white;
+    background:#ffffff55;
+    margin-left:5px;
+}
