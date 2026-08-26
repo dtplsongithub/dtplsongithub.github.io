@@ -82,7 +82,7 @@ let levels = {
         "tags": ["cube"]
     },
     "138140131": {
-        "name": "Unnamed 67    wd 40",
+        "name": "Unnamed 67 wd 40",
         "tags": ["wave"]
     },
     "131382424": {
